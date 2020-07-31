@@ -1,0 +1,61 @@
+{
+  "name": "montero-bufete",
+  "version": "1.0.0",
+  "description": "nuestro primer proyecto de nodej\u001b[D\u001b[D\u001b[D\u001b[N\u001b[C\u001b[C\u001b[C\u001b[Js\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[N",
+  "main": "index.html",
+  "scripts": {
+    "dev": "lite-server",
+    "start": "concurrently \"npm run dev\" \"npm run watch:scss\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o css/ css/",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss ",
+    "clean": "rimraf dist",
+    "imagemin": "imagemin images/* --out-dir dist/images",
+    "usemin": "usemin index.html -d dist --htmlmin -o dist/index.html && usemin about.html -d dist --htmlmin -o dist/about.html && usemin contacto.html -d dist --htmlmin -o dist/contacto.html && usemin costos.html -d dist --htmlmin -o dist/costos.html && usemin sugerencias.html -d dist --htmlmin -o dist/sugerencias.html",
+    "build": "npm run clean && npm run scss && npm run imagemin && npm run usemin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Ka_11guerrero@bitbucket.org/Ka_11guerrero/montero-bufete.git"
+  },
+  "author": "Katherine Guerrero",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/Ka_11guerrero/montero-bufete#readme",
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "browser-sync": "^2.26.12",
+    "copyfiles": "^2.3.0",
+    "cssmin": "^0.4.3",
+    "grunt": "^1.2.1",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^2.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^3.0.0",
+    "grunt-contrib-imagemin": "^4.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^5.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-filerev": "^2.3.1",
+    "grunt-usemin": "^3.1.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "htmlmin": "0.0.7",
+    "jit-grunt": "^0.10.0",
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.2",
+    "rimraf": "^3.0.2",
+    "time-grunt": "^2.0.0",
+    "uglifyjs": "^2.4.11",
+    "usemin-cli": "^0.6.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "concurrently": "^5.2.0",
+    "jquery": "^3.5.1",
+    "open-iconic": "^1.1.1",
+    "popper.js": "^1.16.1",
+    "sass": "^1.26.10"
+  }
+}
